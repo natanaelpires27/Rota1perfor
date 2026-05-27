@@ -1,0 +1,10 @@
+{
+  "name": "rota-1",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/validate-static.mjs",
+    "validate": "node scripts/validate-static.mjs"
+  }
+}

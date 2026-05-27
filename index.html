@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Rota 1% transforma metas em método, indicadores, calendário, check-ins e revisões semanais de performance."
+    />
+    <meta name="theme-color" content="#1f2933" />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Rota 1% | Indicadores de Performance" />
+    <meta
+      property="og:description"
+      content="Uma ferramenta para metrificar comportamentos, rastrear rotina e ajustar o método antes de abandonar a meta."
+    />
+    <title>Rota 1% | Indicadores de Performance</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <noscript>O Rota 1% precisa de JavaScript ativado para funcionar.</noscript>
+    <div id="app" class="app-shell" aria-live="polite"></div>
+
+    <div id="project-modal" class="modal-backdrop" hidden>
+      <section class="modal" role="dialog" aria-modal="true" aria-labelledby="project-modal-title">
+        <div class="modal-header">
+          <div>
+            <p class="eyebrow">Novo projeto de treino</p>
+            <h2 id="project-modal-title">Transforme uma meta em método</h2>
+          </div>
+          <button class="icon-button" type="button" data-close-modal aria-label="Fechar">×</button>
+        </div>
+        <form id="project-form" class="modal-body">
+          <div class="form-grid">
+            <label>
+              Meta
+              <input name="title" required placeholder="Ex: Escrever meu livro em 120 dias" />
+            </label>
+            <label>
+              Área
+              <select name="area">
+                <option>Carreira</option>
+                <option>Saúde</option>
+                <option>Estudos</option>
+                <option>Finanças</option>
+                <option>Família</option>
+                <option>Espiritualidade</option>
+                <option>Performance</option>
+              </select>
+            </label>
+            <label>
+              Estado atual
+              <input name="currentState" placeholder="Onde você está hoje?" />
+            </label>
+            <label>
+              Estado desejado
+              <input name="desiredState" placeholder="Onde você quer chegar?" />
+            </label>
+            <label>
+              Critério de sucesso
+              <input name="successCriteria" required placeholder="Como saberemos que deu certo?" />
+            </label>
+            <label>
+              Prazo
+              <input name="deadline" type="date" required />
+            </label>
+          </div>
+
+          <label>
+            Motivação principal
+            <textarea name="why" rows="3" required placeholder="Por que essa meta importa de verdade?"></textarea>
+          </label>
+
+          <div class="form-grid">
+            <label>
+              Custo de não agir
+              <input name="costOfInaction" placeholder="O que acontece se você não fizer?" />
+            </label>
+            <label>
+              Frase de compromisso
+              <input name="commitmentPhrase" placeholder="Ex: Quem tem meta tem método." />
+            </label>
+          </div>
+
+          <label>
+            Método inicial
+            <textarea name="methodDescription" rows="3" placeholder="Quais passos, hábitos e premissas sustentam essa meta?"></textarea>
+          </label>
+
+          <div class="behavior-builder">
+            <div>
+              <p class="eyebrow">Primeiros comportamentos</p>
+              <h3>Comece com até 3 não negociáveis</h3>
+            </div>
+            <div class="behavior-row">
+              <input name="behavior1" placeholder="Comportamento 1" required />
+              <input name="target1" type="number" min="1" value="1" aria-label="Meta do comportamento 1" />
+              <input name="unit1" value="check" aria-label="Unidade do comportamento 1" />
+            </div>
+            <div class="behavior-row">
+              <input name="behavior2" placeholder="Comportamento 2" />
+              <input name="target2" type="number" min="1" value="30" aria-label="Meta do comportamento 2" />
+              <input name="unit2" value="min" aria-label="Unidade do comportamento 2" />
+            </div>
+            <div class="behavior-row">
+              <input name="behavior3" placeholder="Comportamento 3" />
+              <input name="target3" type="number" min="1" value="1" aria-label="Meta do comportamento 3" />
+              <input name="unit3" value="sessão" aria-label="Unidade do comportamento 3" />
+            </div>
+          </div>
+
+          <div class="modal-actions">
+            <button class="button ghost" type="button" data-close-modal>Cancelar</button>
+            <button class="button primary" type="submit">Criar projeto</button>
+          </div>
+        </form>
+      </section>
+    </div>
+
+    <div id="toast" class="toast" hidden></div>
+    <script src="/app.js" defer></script>
+  </body>
+</html>
