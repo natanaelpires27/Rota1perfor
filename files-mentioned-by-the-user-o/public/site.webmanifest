@@ -1,0 +1,18 @@
+{
+  "name": "Rota 1% | Indicadores de Performance",
+  "short_name": "Rota 1%",
+  "description": "Transforme metas em metodo, indicadores, calendario, check-ins e revisoes semanais.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f7f5ef",
+  "theme_color": "#1f2933",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
